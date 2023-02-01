@@ -6,6 +6,18 @@ using System.Threading.Tasks;
 
 namespace MSTestMoodCheck
 {
+    public class CustomException : Exception
+    {
+        ExceptionType type;
+        public enum ExceptionType
+        {
+            NULL_EXCEPTION, EMPTY_EXCEPTION
+        }
+        public CustomException(ExceptionType type, string message) : base(message)
+        {
+            this.type = type;
+        }
+    }
     public class MoodCheck
     {
         public string mood;
@@ -31,7 +43,7 @@ namespace MSTestMoodCheck
             catch
             {
                 Console.WriteLine("Null Value Present");
-                return "Happy";
+                return "sad";
             }
         }
     }
