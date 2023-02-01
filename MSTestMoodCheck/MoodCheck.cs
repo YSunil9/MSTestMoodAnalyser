@@ -13,7 +13,7 @@ namespace MSTestMoodCheck
             if (Mood.Contains("sad"))
             {
                 Console.WriteLine("Input Contains Sad");
-                return "Sad";
+                return "sad";
             }
             else
             {

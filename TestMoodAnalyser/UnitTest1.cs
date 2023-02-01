@@ -1,4 +1,6 @@
-namespace MSTestMoodAnalyse
+using MSTestMoodCheck;
+
+namespace TestMoodAnalyser
 {
     [TestClass]
     public class UnitTest1
@@ -6,8 +8,8 @@ namespace MSTestMoodAnalyse
         [TestMethod]
         public void TestMethod1()
         {
-            MoodCheck moodCheck = new MoodCheck();
-            string actualResult = moodCheck.ToString();
+            MoodCheck objt = new MoodCheck();
+            string actualResult = objt.GetMood("sad");
             Assert.AreEqual("sad",actualResult);
         }
     }
