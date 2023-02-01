@@ -24,12 +24,12 @@ namespace TestMoodAnalyser
         {
             try
             {
-                MoodCheck objt = new MoodCheck(null);
+                MoodCheck objt = new MoodCheck("");
                 string actualResult = objt.GetMood();
             }
             catch(Exception ex)
             {
-                Assert.AreEqual("Null Mood", ex);
+                Assert.AreEqual("Empty Mood", ex);
             }
         }
     }
