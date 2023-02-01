@@ -8,9 +8,14 @@ namespace MSTestMoodCheck
 {
     public class MoodCheck
     {
-        public string GetMood(string Mood)
+        public string mood;
+        public MoodCheck(string mood)
         {
-            if (Mood.Contains("sad"))
+            this.mood = mood;
+        }
+        public string GetMood()
+        {
+            if (mood.Contains("sad"))
             {
                 Console.WriteLine("Input Contains Sad");
                 return "sad";

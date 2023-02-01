@@ -4,13 +4,8 @@
     {
         static void Main(string[] args)
         {
-            //MoodCheck obj = new MoodCheck("sad");
-            //obj.GetMood();
-
-            MoodCheck obj = new MoodCheck();
-            obj.GetMood("sad");
-
-            Console.WriteLine("");
+            MoodCheck obj = new MoodCheck("sad");
+            obj.GetMood();
         }
     }
 }
