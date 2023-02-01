@@ -12,5 +12,12 @@ namespace TestMoodAnalyser
             string actualResult = objt.GetMood("sad");
             Assert.AreEqual("sad",actualResult);
         }
+        [TestMethod]
+        public void TestReturnHappy()
+        {
+            MoodCheck objt = new MoodCheck();
+            string actualResult = objt.GetMood("Happy");
+            Assert.AreEqual("Happy", actualResult);
+        }
     }
 }
