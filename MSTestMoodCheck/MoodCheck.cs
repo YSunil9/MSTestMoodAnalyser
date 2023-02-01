@@ -15,14 +15,22 @@ namespace MSTestMoodCheck
         }
         public string GetMood()
         {
-            if (mood.Contains("sad"))
+            try
             {
-                Console.WriteLine("Input Contains Sad");
-                return "sad";
+                if (this.mood.Contains("sad"))
+                {
+                    Console.WriteLine("Input Contains Sad");
+                    return "Sad";
+                }
+                else
+                {
+                    Console.WriteLine("Input Contains Happy");
+                    return "Happy";
+                }
             }
-            else
+            catch
             {
-                Console.WriteLine("Input Contains Happy");
+                Console.WriteLine("Null Value Present");
                 return "Happy";
             }
         }

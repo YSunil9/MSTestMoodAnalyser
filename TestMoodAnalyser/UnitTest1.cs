@@ -8,15 +8,22 @@ namespace TestMoodAnalyser
         [TestMethod]
         public void TestMethod1()
         {
-            MoodCheck objt = new MoodCheck();
-            string actualResult = objt.GetMood("sad");
+            MoodCheck objt = new MoodCheck("sad");
+            string actualResult = objt.GetMood();
             Assert.AreEqual("sad",actualResult);
         }
         [TestMethod]
         public void TestReturnHappy()
         {
-            MoodCheck objt = new MoodCheck();
-            string actualResult = objt.GetMood("Happy");
+            MoodCheck objt = new MoodCheck("Happy");
+            string actualResult = objt.GetMood();
+            Assert.AreEqual("Happy", actualResult);
+        }
+        [TestMethod]
+        public void TestNullToReturnHappy()
+        {
+            MoodCheck objt = new MoodCheck("Null");
+            string actualResult = objt.GetMood();
             Assert.AreEqual("Happy", actualResult);
         }
     }
